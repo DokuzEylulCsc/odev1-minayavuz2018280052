@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mina Yavuz</title>
+		
+	</head>
+	<body>
+		<h3>Mina YAVUZ 2018280052</h3>
+		<h2>2019 GUZ DONEMI ILK ODEVI</h2>
+		<br>
+		
+		<label for="input1" >Sayi1: </label>
+		<input type="text" value="" id="input1" />
+		<br><br>
+		
+		<label for="input1" >Sayi2: </label>
+		<input type="text" value="" id="input2" />
+		<br><br>
+		
+		<button type="button" onclick="topla_click()">Topla</button>
+		<br><br>
+		
+		
+		<label for="input1" >Metin1: </label>
+		<input type="text" value="" id="input3" />
+		<br><br>
+		
+		<label for="input1" >Metin2: </label>
+		<input type="text" value="" id="input4" />
+		<br><br>
+		
+		<button type="button" onclick="yapistir_click()">Yapıştır</button>
+		
+		<script type="text/javascript">
+		
+			function topla_click() {
+				var Sayi1 = document.getElementById('input1').value;
+				var Sayi2 = document.getElementById('input2').value;
+
+				if (!isNumeric(Sayi1)) {
+					alert("Lutfen dogru duzgun bir sayi giriniz.");
+					return
+				}
+				if (!isNumeric(Sayi2)) {
+					alert("Lutfen dogru duzgun bir sayi giriniz.");
+					return
+				}
+				
+				alert("Sayilarin toplami = " + (parseInt(Sayi1) + parseInt(Sayi2)) );
+			}
+			
+			function yapistir_click() {
+				var Metin1 = document.getElementById('input3').value;
+				var Metin2 = document.getElementById('input4').value;
+				
+				alert("Olusan Metin = " + (Metin1 + " " + Metin2) );
+			}
+			
+			// this function copied from there (for bonus point): https://stackoverflow.com/questions/9716468/pure-javascript-a-function-like-jquerys-isnumeric
+			function isNumeric(n) {
+			  return !isNaN(parseFloat(n)) && isFinite(n);
+			}
+
+		</script>
+		
+	</body>
+</html>
