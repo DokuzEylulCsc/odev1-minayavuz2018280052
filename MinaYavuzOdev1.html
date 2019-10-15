@@ -32,17 +32,17 @@
 		<button type="button" onclick="yapistir_click()">Yapıştır</button>
 		
 		<script type="text/javascript">
-		
+			//this function learned from there: https://www.webcebir.com/156-javascript-fonksiyon-kullanimi-dersi.html
 			function topla_click() {
 				var Sayi1 = document.getElementById('input1').value;
 				var Sayi2 = document.getElementById('input2').value;
 
 				if (!isNumeric(Sayi1)) {
-					alert("Lutfen dogru duzgun bir sayi giriniz.");
+					alert("Lutfen yalnizca sayi giriniz.");
 					return
 				}
 				if (!isNumeric(Sayi2)) {
-					alert("Lutfen dogru duzgun bir sayi giriniz.");
+					alert("Lutfen yalnizca sayi giriniz.");
 					return
 				}
 				
@@ -56,7 +56,7 @@
 				alert("Olusan Metin = " + (Metin1 + " " + Metin2) );
 			}
 			
-			// this function copied from there : https://stackoverflow.com/questions/9716468/pure-javascript-a-function-like-jquerys-isnumeric
+			// this function learned from there : https://stackoverflow.com/questions/9716468/pure-javascript-a-function-like-jquerys-isnumeric
 			function isNumeric(n) {
 			  return !isNaN(parseFloat(n)) && isFinite(n);
 			}
